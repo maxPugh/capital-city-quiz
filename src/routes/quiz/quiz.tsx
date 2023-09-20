@@ -28,11 +28,11 @@ const Quiz = () => {
           <h2 className="text-2xl font-bold">Loading...</h2>
         ) : (
           <>
-            <h2 className="text-2xl font-bold">
+            <h2 className="text-2xl font-bold text-center">
               What is the capital of {country}?
             </h2>
             <div className="flex flex-col md:flex-row gap-5">
-              {answers.map((answer) => (
+              {answers.map((answer, i) => (
                 <AnswerButton
                   text={answer}
                   handleClick={() => submitAnswer(answer)}
@@ -52,7 +52,11 @@ const Quiz = () => {
           </>
         )}
         <div className="flex flex-col md:flex-row gap-2">
-          <Button text="New Question" handleClick={() => getNewQuestion()} />
+          <Button
+            text="New Question"
+            handleClick={() => getNewQuestion()}
+            disabled={!submitted}
+          />
           <Button text="Exit" handleClick={() => navigate("/")} />
         </div>
       </div>
