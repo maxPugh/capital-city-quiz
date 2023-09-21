@@ -1,9 +1,6 @@
-
 # Capital City Quiz
 
 a web app that lets users guess country's capital cities.
-
-
 
 ## Installation
 
@@ -23,18 +20,15 @@ This will run the application on the following url
 
 http://localhost:5173/
 
-
-    
 ## Running Tests
 
-To run tests, run the following command
+To run tests, run the following commands
 
 ```bash
+  npx playwright install
   npm run test-e2e
 ```
-
 
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
